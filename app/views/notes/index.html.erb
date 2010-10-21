@@ -1,0 +1,33 @@
+<h1>Postępy pracy inżynierskiej</h1>
+<br/>
+<%= link_to 'Nowy wpis', new_note_path %>
+<% @notes.each do |note| %>
+<div class="note radius5">
+    <div>
+        <span class="left">Stworzono: <%= note.created_at.strftime("%d.%m.%Y o %H:%M") %></span>
+        <span class="right">Edytowano: <%= note.updated_at.strftime("%d.%m.%Y o  %H:%M") %></span>
+    </div>
+	<br class="clear"/>
+	<div>
+		<span class="left">Liczba godzin:
+        <%= note.godziny %>
+    	</span>
+	</div>
+	<br class="clear"/>
+    <p>
+        <%= note.plan %>
+    </p>
+    <p>
+        <%= note.realizacja %>
+     </p>
+    <p>
+        <%= note.uwagi %>
+    </p>
+    <div class="field">
+    <%= link_to 'Show', note %>|<%= link_to 'Edit', edit_note_path(note) %>|<%= link_to 'Destroy', note, :confirm => 'Jesteś pewien?', :method => :delete %>
+    </td>
+</div>
+</div>
+<% end %>
+<%= will_paginate @notes %>
+

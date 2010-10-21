@@ -1,0 +1,32 @@
+<h1>Test your english!</h1>
+<p id="notice"><%= notice %></p>
+<%=  form_tag :action => "check" do%>
+  <% if @word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@word.errors.count, "error") %> prohibited this word from being saved:</h2>
+
+      <ul>
+      <% @word.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+<%= case @cos
+when 0 then render 'rand_pl_form'
+when 1 then render 'rand_en_form'
+else render 'rand_en_form'
+ end %>
+ 
+ 
+  <div class="actions">
+    <%= hidden_field_tag 'id', @word.id %>
+	<%= hidden_field_tag 'cos', @cos %>
+	<%=  submit_tag 'sprawdz' %>
+  </div>
+<% end %>
+
+<%= link_to 'Show', @word %> |
+<%= link_to 'Wróć', words_path %>
+

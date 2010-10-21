@@ -1,0 +1,35 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.note {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    -border
+}
+
+.page {
+    margin: 0px auto;
+    width: 900px;
+}
+
+.radius3 {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.radius5 {
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.clear{
+	display:block;
+	clear:both;
+}
