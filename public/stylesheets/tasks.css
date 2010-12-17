@@ -1,0 +1,18 @@
+.matrix {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.matrix td, .matrix th {
+    width:300px;
+    height:300px;
+}
+.matrix td , .matrix th {
+    border: 1px solid black;
+}
+tr.head, th.head {
+    height:30px;
+}
+th.left, tr.left {
+    width:110px;
+    vertical-align: middle;
+}

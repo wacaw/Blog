@@ -1,54 +1,26 @@
 <h1>Listing tasks</h1>
 <table class="matrix">
-    <tr>
-        <th></th>
-        <th>PILNE</th>
-        <th>nie pilne</th>
+    <tr class="head">
+        <th class="head left"></th>
+        <th class="head">PILNE</th>
+        <th class="head">nie pilne</th>
     </tr>
     <tr>
-        <th>WAŻNE</th>
+        <th class="left">WAŻNE</th>
         <td>
-        <% @tasks1.each do |task| %>
-        <div>
-            <%= task.name %>
-            <%= link_to 'Show', task %>
-            <%= link_to 'Edit', edit_task_path(task) %>
-            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
-        </div>
-        <% end %>
+        <%= render 'list', :tasks=>@tasks1 %>
         </td>
         <td>
-        <% @tasks2.each do |task| %>
-        <div>
-            <%= task.name %>
-            <%= link_to 'Show', task %>
-            <%= link_to 'Edit', edit_task_path(task) %>
-            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
-        </div>
-        <% end %>
+        <%= render 'list', :tasks=>@tasks2 %>
         </td>
     </tr>
     <tr>
-        <th>nie ważne</th>
-        <td>
-        <% @tasks3.each do |task| %>
-        <div>
-            <%= task.name %>
-            <%= link_to 'Show', task %>
-            <%= link_to 'Edit', edit_task_path(task) %>
-            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
-        </div>
-        <% end %>
+        <th class="left">nie ważne</th>
+        <td >
+        <%= render 'list', :tasks=>@tasks3 %>
         </td>
         <td>
-        <% @tasks4.each do |task| %>
-        <div>
-            <%= task.name %>
-            <%= link_to 'Show', task %>
-            <%= link_to 'Edit', edit_task_path(task) %>
-            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
-        </div>
-        <% end %>
+        <%= render 'list', :tasks=>@tasks4 %>
         </td>
     </tr>
 </table>
