@@ -1,17 +1,43 @@
 Blog::Application.routes.draw do
+  
+  
+  resources :tasks
+
+  match 'user/edit' => 'users#edit', :as => :edit_user
+
+  match 'signup' => 'users#new', :as => :signup
+
+  match 'logout' => 'sessions#destroy', :as => :logout
+
+  match 'login' => 'sessions#new', :as => :login
+
+  resources :sessions
+
+  resources :user_sessions
+  
+  resources :user_sessions
+  
+  match 'login' => "user_sessions#new",      :as => :login
+  match 'logout' => "user_sessions#destroy", :as => :logout
+  
+  resources :users
+  
+  get "home/index"
+  
   resources :notes do
     resources :comments
-    end
-    
-
-  resources :words do
-  collection do
-    get 'random' 
-    post 'check'
-    get 'check'
   end
-end
-
+  
+  
+  resources :words do
+    collection do
+      get 'random' 
+      post 'check'
+      get 'check'
+    end
+  end
+  
+  
   
   
   

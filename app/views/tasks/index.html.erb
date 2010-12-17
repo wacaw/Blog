@@ -1,0 +1,57 @@
+<h1>Listing tasks</h1>
+<table class="matrix">
+    <tr>
+        <th></th>
+        <th>PILNE</th>
+        <th>nie pilne</th>
+    </tr>
+    <tr>
+        <th>WAŻNE</th>
+        <td>
+        <% @tasks1.each do |task| %>
+        <div>
+            <%= task.name %>
+            <%= link_to 'Show', task %>
+            <%= link_to 'Edit', edit_task_path(task) %>
+            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+        <% end %>
+        </td>
+        <td>
+        <% @tasks2.each do |task| %>
+        <div>
+            <%= task.name %>
+            <%= link_to 'Show', task %>
+            <%= link_to 'Edit', edit_task_path(task) %>
+            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+        <% end %>
+        </td>
+    </tr>
+    <tr>
+        <th>nie ważne</th>
+        <td>
+        <% @tasks3.each do |task| %>
+        <div>
+            <%= task.name %>
+            <%= link_to 'Show', task %>
+            <%= link_to 'Edit', edit_task_path(task) %>
+            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+        <% end %>
+        </td>
+        <td>
+        <% @tasks4.each do |task| %>
+        <div>
+            <%= task.name %>
+            <%= link_to 'Show', task %>
+            <%= link_to 'Edit', edit_task_path(task) %>
+            <%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+        <% end %>
+        </td>
+    </tr>
+</table>
+<br />
+
+<%= link_to 'New Task', new_task_path %>

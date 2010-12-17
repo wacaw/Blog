@@ -2,6 +2,7 @@
 # by Jacek Becela (jacek.becela@gmail.com, http://github.com/ncr)
 
 pl:
+
   number:
     format:
       separator: ","
@@ -154,3 +155,11 @@ pl:
       last_word_connector: " i "
     select:
       prompt: "Proszę wybrać:"
+
+  error:
+      one: "błąd"
+      two: "błędy"
+      three: "błędy"
+      four: "błędy"
+      other: "błędów"
+  

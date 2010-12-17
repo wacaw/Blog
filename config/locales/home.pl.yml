@@ -1,0 +1,19 @@
+
+pl:
+  register:
+    title: "Zarejestruj się"
+    submit: "Zarejestruj się"
+    email: "E-mail"
+    password: "Hasło"
+    username: "Nazwa użytkownika"
+    password_confirmation: "Powtórz hasło"
+    lang: "Język"
+    currency: "Waluta"
+    groupname: "Nazwa grupy"
+    hint:
+      groupname: "Np. Kowalscy, Spływ Kajakowy, Wyjazd do Krakowa"
+  
+  login:
+    login: "Login"
+    password: "haslo"
+    submit: "Zaloguj"

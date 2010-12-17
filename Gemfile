@@ -4,8 +4,10 @@ gem 'rails', '3.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'simple_form'
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'mysql2'
+gem 'nifty-generators'
 gem "will_paginate", "3.0.pre2"
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -28,3 +30,5 @@ gem "will_paginate", "3.0.pre2"
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test
+gem "bcrypt-ruby", :require => "bcrypt"
