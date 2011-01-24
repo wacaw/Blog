@@ -6,7 +6,7 @@ class TasksController < ApplicationController
         @tasks2 = Task.important_not_urgent.todo
         @tasks3 = Task.not_important_urgent.todo
         @tasks4 = Task.not_important_not_urgent.todo
-        @tesks_finished = Task.finished
+        @tasks_finished = Task.finished.order("id DESC")
         respond_to do |format|
             format.html # index.html.erb
             format.xml  { render :xml => @tasks }
@@ -56,7 +56,7 @@ class TasksController < ApplicationController
 
         respond_to do |format|
             if @task.save
-                format.html { redirect_to(@task, :notice => 'Task was successfully created.') }
+                format.html { redirect_to(tasks_url, :notice => 'Task was successfully created.') }
                 format.xml  { render :xml => @task, :status => :created, :location => @task }
             else
                 format.html { render :action => "new" }
@@ -72,7 +72,7 @@ class TasksController < ApplicationController
 
         respond_to do |format|
             if @task.update_attributes(params[:task])
-                format.html { redirect_to(@task, :notice => 'Task was successfully updated.') }
+                format.html { redirect_to(tasks_url, :notice => 'Task was successfully updated.') }
                 format.xml  { head :ok }
             else
                 format.html { render :action => "edit" }

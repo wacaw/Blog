@@ -47,6 +47,7 @@ class NotesController < ApplicationController
       if @note.save
         format.html { redirect_to(@note, :notice => 'Note was successfully created.') }
         format.xml  { render :xml => @note, :status => :created, :location => @note }
+        format.js {render :action => "dodano" }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @note.errors, :status => :unprocessable_entity }

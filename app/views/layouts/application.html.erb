@@ -9,7 +9,19 @@
     </head>
     <body>
         <div id="container">
-
+            <div id="main-menu">
+                <ul id="mainmenu">
+                    <li>
+                        <%= link_to  "Postepy", notes_path %>
+                    </li>
+                    <li>
+                        <%= link_to  "Słówka ang", words_path %>
+                    </li>
+                    <li>
+                        <%= link_to  "Zadania", tasks_path %>
+                    </li>
+                </ul>
+            </div>
             <% flash.each do |name, msg| %>
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
             <% end %>

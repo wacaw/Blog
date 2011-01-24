@@ -1,0 +1,12 @@
+<h2>Komentarze</h2>
+<% @note.comments.each do |comment| %>
+  <p>
+    <b>Komentujący:</b>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <b>Comment:</b>
+    <%= comment.body %>
+  </p>
+<% end %>

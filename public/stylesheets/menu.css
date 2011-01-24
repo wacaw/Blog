@@ -1,0 +1,50 @@
+#main-menu {
+    clear:both;
+    display:block;
+    width:100%
+}
+ul#mainmenu {
+    border-top:1px solid #2C9BFF;
+    display:block;
+    font-size:13px;
+    height:50px;
+    list-style:none outside none;
+    margin:auto;
+    text-align:center;
+}
+ul#mainmenu li {
+    float:left;
+}
+ul#mainmenu li a {
+    color:#444444;
+    display:inline-block;
+    font-size:14px;
+    font-weight:normal;
+    line-height:50px;
+    margin:0;
+    padding:0 10px;
+    text-decoration:none;
+    text-shadow:0 0 2px #FFFFFF;
+}
+ul#mainmenu li a:hover {
+    background:-moz-linear-gradient(center top , #2C9BFF 1%, #FFFFFF 48%) repeat scroll 0 0 transparent;
+    background:
+    -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.1, #2C9BFF),
+    color-stop(0.48, #FFFFFF)
+    );
+
+    color:#051A6A;
+    text-decoration:none;
+}
+ul#mainmenu li a.active {
+    color:#051A6A;
+    text-decoration:none;
+}
+ul#mainmenu li a.active:hover {
+    color:#3345C6;
+    text-decoration:none;
+}

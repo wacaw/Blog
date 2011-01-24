@@ -33,7 +33,7 @@
 <% end %>
 
 <h2>Dodaj komentarz:</h2>
-<%= form_for([@note, @note.comments.build]) do |f| %>
+<%= form_for ([@note, @note.comments.build]), :remote=>true  do |f| %>
 
   <div class="field">
     <%= f.label :commenter %><br />

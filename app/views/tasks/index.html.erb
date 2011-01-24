@@ -2,11 +2,11 @@
 <table class="matrix">
     <tr class="head">
         <th class="head left"></th>
-        <th class="head">PILNE</th>
-        <th class="head">nie pilne</th>
+        <th class="head"><%= t'task.urgent'%></th>
+        <th class="head"><%= t'task.noturgent'%></th>
     </tr>
     <tr>
-        <th class="left">WAŻNE</th>
+        <th class="left"><%= t'task.important'%></th>
         <td>
         <%= render 'list', :tasks=>@tasks1 %>
         </td>
@@ -15,7 +15,7 @@
         </td>
     </tr>
     <tr>
-        <th class="left">nie ważne</th>
+        <th class="left"><%= t'task.notimportant'%></th>
         <td >
         <%= render 'list', :tasks=>@tasks3 %>
         </td>
@@ -26,4 +26,8 @@
 </table>
 <br />
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to <%= t'task.new'%>, new_task_path %>
+
+<h4><%= t'task.done_taskt'%>:</h4>
+
+<%= render 'list', :tasks=> @tasks_finished %>
